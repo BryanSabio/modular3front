@@ -76,7 +76,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         backgroundColor: Colors.deepPurpleAccent,
       ),
 
-      //backgroundColor: Color.fromARGB(188, 156, 153, 150), //fondo del fondo
+
+      //backgroundColor: Color.fromARGB(188, 156, 153, 150), //foto del fondo
 
       body: Padding(
           padding: const EdgeInsets.all(10),
