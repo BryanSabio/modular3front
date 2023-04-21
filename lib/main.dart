@@ -84,7 +84,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           child: ListView(
             children: <Widget>[
               Container(
-                child: Image.asset('assets/images/huellas.jpeg'),
+                child: Image.asset('assets/images/huellas.jpeg'), //checar
               ),
               Container(
                   alignment: Alignment.center,
