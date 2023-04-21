@@ -1,6 +1,7 @@
 // ignore_for_file: depend_on_referenced_packages
 
 import 'dart:convert';
+import 'package:animated_background/animated_background.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:apptiendafrom/usuario.dart';
@@ -76,13 +77,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         backgroundColor: Colors.deepPurpleAccent,
       ),
 
-
       //backgroundColor: Color.fromARGB(188, 156, 153, 150), //foto del fondo
-
+      //backgroundImage: AssetImage('assets/images/huellas.jpeg'),
       body: Padding(
           padding: const EdgeInsets.all(10),
           child: ListView(
             children: <Widget>[
+              Container(
+                child: Image.asset('assets/images/huellas.jpeg'),
+              ),
               Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
