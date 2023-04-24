@@ -28,7 +28,7 @@ class inicio extends StatelessWidget {
             // ignore: avoid_unnecessary_containers
             Container(
               // ignore: prefer_const_constructors
-              child: Image.asset('assets/images/pequeños.png'),
+              child: Image.asset('assets/images/pequenos.png'),
               height: 550,
             ),
             Container(

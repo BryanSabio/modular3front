@@ -84,10 +84,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           child: ListView(
             children: <Widget>[
               Container(
-                transformAlignment: Alignment.bottomRight,
-                child: Image.asset('assets/images/logo2.png'), //checar
-              ),
-              Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
                   child: const Text(
