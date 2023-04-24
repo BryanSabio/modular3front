@@ -28,11 +28,8 @@ class inicio extends StatelessWidget {
             // ignore: avoid_unnecessary_containers
             Container(
               // ignore: prefer_const_constructors
-              child: Image(
-                // ignore: prefer_const_constructors
-                image: NetworkImage('assets/images/pequeños.png'),
-                height: 550,
-              ),
+              child: Image.asset('assets/images/pequeños.png'),
+              height: 550,
             ),
             Container(
                 alignment: Alignment.center,
@@ -59,11 +56,8 @@ class inicio extends StatelessWidget {
                 )),
             Container(
               // ignore: prefer_const_constructors
-              child: Image(
-                // ignore: prefer_const_constructors
-                image: NetworkImage('assets/images/medianos.png'),
-                height: 550,
-              ),
+              child: Image.asset('assets/images/medianos.png'),
+              height: 550,
             ),
             Container(
                 alignment: Alignment.center,
@@ -87,11 +81,8 @@ class inicio extends StatelessWidget {
                 )),
             Container(
               // ignore: prefer_const_constructors
-              child: Image(
-                // ignore: prefer_const_constructors
-                image: NetworkImage('assets/images/grande.png'),
-                height: 550,
-              ),
+              child: Image.asset('assets/images/grande.png'),
+              height: 550,
             ),
             Container(
                 alignment: Alignment.center,
@@ -115,11 +106,8 @@ class inicio extends StatelessWidget {
                 )),
             Container(
               // ignore: prefer_const_constructors
-              child: Image(
-                // ignore: prefer_const_constructors
-                image: NetworkImage('assets/images/gigantes.png'),
-                height: 550,
-              ),
+              child: Image.asset('assets/images/gigantes.png'),
+              height: 550,
             ),
             Container(
                 alignment: Alignment.center,
