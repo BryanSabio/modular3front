@@ -1,10 +1,10 @@
 import 'package:apptiendafrom/models/producto_gigante.dart';
 import 'package:flutter/foundation.dart';
-import 'package:http/http.dart' as http;
+import 'package:http/http.dart' as https;
 import '../../config.dart';
 
 class APIProductogi {
-  static var client = http.Client();
+  static var client = https.Client();
 
   static Future<List<ProductogiModel>?> getProductosgi() async {
     Map<String, String> requestHeaders = {
@@ -45,7 +45,7 @@ class APIProductogi {
 
     var requestMethod = isEditMode ? "PUT" : "POST";
 
-    var request = http.MultipartRequest(requestMethod, url);
+    var request = https.MultipartRequest(requestMethod, url);
     request.fields["nombre"] = modelgi.nombre!;
     request.fields["precio"] = double.parse(modelgi.precio!).toStringAsFixed(2);
     request.fields["marca"] = modelgi.marca!;
@@ -53,7 +53,7 @@ class APIProductogi {
     request.fields["descripcion"] = modelgi.descripcion!;
 
     if (modelgi.imagen != null && isFileSelected) {
-      http.MultipartFile multipartFile = await http.MultipartFile.fromPath(
+      https.MultipartFile multipartFile = await https.MultipartFile.fromPath(
         'imagen',
         modelgi.imagen!,
       );
