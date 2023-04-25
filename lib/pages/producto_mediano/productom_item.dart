@@ -124,20 +124,10 @@ class ProductomItem extends StatelessWidget {
                       GestureDetector(
                         child: const Icon(
                           Icons.delete,
-                          color: Colors.black12,
+                          color: Colors.red,
                         ),
                         onTap: () {
                           onDelete!(model);
-                        },
-                      ),
-                      GestureDetector(
-                        child: const Icon(
-                          Icons.share,
-                          color: Colors.black,
-                        ),
-                        onTap: () {
-                          Share.share(
-                              "https://lucent-begonia-4953ae.netlify.app/");
                         },
                       ),
                     ],
