@@ -11,7 +11,7 @@ class APIProducto {
       'Content-Type': 'application/json',
     };
 
-    var url = Uri.http(
+    var url = Uri.https(
       Config.apiURL,
       Config.productosAPI,
     );
@@ -41,7 +41,7 @@ class APIProducto {
       productURL = "$productURL${model.id.toString()}/";
     }
 
-    var url = Uri.http(Config.apiURL, productURL);
+    var url = Uri.https(Config.apiURL, productURL);
 
     var requestMethod = isEditMode ? "PUT" : "POST";
 
@@ -79,7 +79,7 @@ class APIProducto {
       'Content-Type': 'application/json',
     };
 
-    var url = Uri.http(Config.apiURL, "${Config.productosAPI}/$productId/");
+    var url = Uri.https(Config.apiURL, "${Config.productosAPI}/$productId/");
 
     var response = await client.delete(
       url,

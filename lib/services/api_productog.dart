@@ -11,7 +11,7 @@ class APIProductog {
       'Content-Type': 'application/json',
     };
 
-    var url = Uri.http(
+    var url = Uri.https(
       Config.apiURL,
       Config.productosgAPI,
     );
@@ -41,7 +41,7 @@ class APIProductog {
       productURL = "$productURL${modelg.id.toString()}/";
     }
 
-    var url = Uri.http(Config.apiURL, productURL);
+    var url = Uri.https(Config.apiURL, productURL);
 
     var requestMethod = isEditMode ? "PUT" : "POST";
 
@@ -76,7 +76,7 @@ class APIProductog {
       'Content-Type': 'application/json',
     };
 
-    var url = Uri.http(Config.apiURL, "${Config.productosgAPI}/$productId/");
+    var url = Uri.https(Config.apiURL, "${Config.productosgAPI}/$productId/");
 
     var response = await client.delete(
       url,

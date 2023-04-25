@@ -11,7 +11,7 @@ class APIProductogi {
       'Content-Type': 'application/json',
     };
 
-    var url = Uri.http(
+    var url = Uri.https(
       Config.apiURL,
       Config.productosgiAPI,
     );
@@ -41,7 +41,7 @@ class APIProductogi {
       productURL = "$productURL${modelgi.id.toString()}/";
     }
 
-    var url = Uri.http(Config.apiURL, productURL);
+    var url = Uri.https(Config.apiURL, productURL);
 
     var requestMethod = isEditMode ? "PUT" : "POST";
 
@@ -75,7 +75,7 @@ class APIProductogi {
       'Content-Type': 'application/json',
     };
 
-    var url = Uri.http(Config.apiURL, "${Config.productosgiAPI}/$productId/");
+    var url = Uri.https(Config.apiURL, "${Config.productosgiAPI}/$productId/");
 
     var response = await client.delete(
       url,
