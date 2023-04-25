@@ -19,7 +19,7 @@ class inicio extends StatelessWidget {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  '¿Que come mi mascota?',
+                  '¿Qué come mi mascota?',
                   style: TextStyle(
                       color: Color.fromARGB(255, 15, 15, 172),
                       fontWeight: FontWeight.w500,
