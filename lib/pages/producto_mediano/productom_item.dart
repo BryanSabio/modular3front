@@ -130,6 +130,7 @@ class ProductomItem extends StatelessWidget {
                           onDelete!(model);
                         },
                       ),
+                      if (Config.isAnonymun = true)
                       GestureDetector(
                         child: const Icon(Icons.share),
                         onTap: () {
