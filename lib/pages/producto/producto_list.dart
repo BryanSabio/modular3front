@@ -109,16 +109,16 @@ class _ProductosListState extends State<ProductosList> {
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
                   child: const Text(
-                    '* RAZAS PEQUEÑAS COMO:',
+                    '* RAZAS PEQUEÑAS COMO EJEMPLO:',
                     style: TextStyle(fontSize: 20, color: Colors.deepOrange),
                   )),
               Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
                   child: const Text(
-                    'Chihuahua,  Pomerania,  Cavalier king charles spaniel,  Caniche,  Carlino,  Yorkshire terrier,  '
+                    '(Chihuahua,  Pomerania,  Cavalier king charles spaniel,  Caniche,  Carlino,  Yorkshire terrier,  '
                     'Papillón,  Bichón maltés,  Dachshund,  Bulldog francés,  Schnauzer,  Jack russell terrier,  Bulldog inglés,  Pinscher miniatura,  '
-                    'Galgo italiano,  Corgi,  Ratonero valenciano,  Cockapoo,  Shih tzu,  Beagle,  etc.',
+                    'Galgo italiano,  Corgi,  Ratonero valenciano,  Cockapoo,  Shih tzu,  Beagle,  etc.)',
                     style: TextStyle(fontSize: 20, color: Colors.black),
                   )),
               //Navigator.pushNamed(context,'/add-product',);
@@ -151,7 +151,7 @@ class _ProductosListState extends State<ProductosList> {
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
                   child: const Text(
-                    '* Aplican restricciones. Precios sujetos a cambios sin previo aviso.',
+                    '* Aplican restricciones. Precios y Adquirir estan sujetos a cambios sin previo aviso.',
                     style: TextStyle(fontSize: 20),
                   )),
             ],

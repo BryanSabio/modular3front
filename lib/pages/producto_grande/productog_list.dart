@@ -109,19 +109,19 @@ class _ProductosgListState extends State<ProductosgList> {
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
                   child: const Text(
-                    '* RAZAS GRANDES COMO:',
+                    '* RAZAS GRANDES COMO EJEMPLO:',
                     style: TextStyle(fontSize: 20, color: Colors.deepOrange),
                   )),
               Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
                   child: const Text(
-                    'Rottweiler,  Bull terrier,  American bully,  Dóberman,  Dogo burdeos,  Golden retriever,  Fila brasileño,  '
+                    '(Rottweiler,  Bull terrier,  American bully,  Dóberman,  Dogo burdeos,  Golden retriever,  Fila brasileño,  '
                     'Alaskan malamute,  Akita inu,  American pit bull terrier,  American staffordshire,  Airedale terrier,  Basset hound,  '
                     'Boyero de berna,  Bobtail,  Braco alemán,  Bullmastiff,  Dogo alemán,  Dogo argentino,  Husky siberiano,  Gran boyero suizo,  '
                     'Labrador retriever,  Lobero irlandés,  Mastín español,  Mastín del pirineo,  Mastín napolitano,  Mastín tibetano,  '
                     'Pastor alemán,  Pointer inglés,  Pastor belga,  San bernardo,  Setter inglés,  Setter irlandés,  Springer spaniel inglés,  '
-                    'Staffordshire bull terrier,  Terranova,  Tosa inu,  etc.',
+                    'Staffordshire bull terrier,  Terranova,  Tosa inu,  etc.)',
                     style: TextStyle(fontSize: 20, color: Colors.black),
                   )),
               //Navigator.pushNamed(context,'/add-product',);
@@ -154,7 +154,7 @@ class _ProductosgListState extends State<ProductosgList> {
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
                   child: const Text(
-                    '* Aplican restricciones. Precios sujetos a cambios sin previo aviso.',
+                    '* Aplican restricciones. Precios y Adquirir estan sujetos a cambios sin previo aviso.',
                     style: TextStyle(fontSize: 20),
                   )),
             ],

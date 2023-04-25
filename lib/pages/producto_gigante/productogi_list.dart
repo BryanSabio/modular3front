@@ -109,16 +109,16 @@ class _ProductosgiListState extends State<ProductosgiList> {
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
                   child: const Text(
-                    '* RAZAS GIGANTES COMO:',
+                    '* RAZAS GIGANTES COMO EJEMPLO:',
                     style: TextStyle(fontSize: 20, color: Colors.deepOrange),
                   )),
               Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
                   child: const Text(
-                    'Boyero de Berna,  Leonberger,  Terrier ruso negro,  Pastor del Caúcaso,  Terranova,  '
+                    '(Boyero de Berna,  Leonberger,  Terrier ruso negro,  Pastor del Caúcaso,  Terranova,  '
                     'Gran danés (perro caballo),  Tosa inu,  Mastín napolitano,  Mastín español,  Mastín del pirineo,  Dogo español,  '
-                    'Presa canario,  Alano español,  Mastín tibetano,  Mastín inglés,  Bullmastiff,  etc.',
+                    'Presa canario,  Alano español,  Mastín tibetano,  Mastín inglés,  Bullmastiff,  etc.)',
                     style: TextStyle(fontSize: 20, color: Colors.black),
                   )),
               //Navigator.pushNamed(context,'/add-product',);
@@ -151,7 +151,7 @@ class _ProductosgiListState extends State<ProductosgiList> {
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
                   child: const Text(
-                    '* Aplican restricciones. Precios sujetos a cambios sin previo aviso.',
+                    '* Aplican restricciones. Precios y Adquirir estan sujetos a cambios sin previo aviso.',
                     style: TextStyle(fontSize: 20),
                   )),
             ],

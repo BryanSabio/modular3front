@@ -31,7 +31,7 @@ class _ProductogAddEditState extends State<ProductogAddEdit> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Form Producto'),
+          title: const Text('Formulario Producto'),
           elevation: 0,
         ),
         backgroundColor: Colors.grey[200],

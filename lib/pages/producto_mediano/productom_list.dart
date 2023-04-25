@@ -109,16 +109,16 @@ class _ProductosmListState extends State<ProductosmList> {
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
                   child: const Text(
-                    '* RAZAS MEDIANAS COMO:',
+                    '* RAZAS MEDIANAS COMO EJEMPLO:',
                     style: TextStyle(fontSize: 20, color: Colors.deepOrange),
                   )),
               Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
                   child: const Text(
-                    'Labrador Retriever,  Bóxer,  Husky Siberiano,  Pitbull,  Bulldog inglés,  Chow Chow,  Samoyedo, '
+                    '(Labrador Retriever,  Bóxer,  Husky Siberiano,  Pitbull,  Bulldog inglés,  Chow Chow,  Samoyedo, '
                     'Border Collie,  Dálmata,  Basset Hound,  Pastor australiano,  Pastor ganadero australiano,  Seltie o pastor de las islas Shetland, '
-                    'Vizsla o Braco húngaro,  Weimaraner o Braco de Weimar,  etc.',
+                    'Vizsla o Braco húngaro,  Weimaraner o Braco de Weimar,  etc.)',
                     style: TextStyle(fontSize: 20, color: Colors.black),
                   )),
               //Navigator.pushNamed(context,'/add-product',);
@@ -151,7 +151,7 @@ class _ProductosmListState extends State<ProductosmList> {
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
                   child: const Text(
-                    '* Aplican restricciones. Precios sujetos a cambios sin previo aviso.',
+                    '* Aplican restricciones. Precios y Adquirir estan sujetos a cambios sin previo aviso.',
                     style: TextStyle(fontSize: 20),
                   )),
             ],
