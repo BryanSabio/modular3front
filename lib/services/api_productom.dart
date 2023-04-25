@@ -1,10 +1,10 @@
 import 'package:apptiendafrom/models/producto_mediano.dart';
 import 'package:flutter/foundation.dart';
-import 'package:http/http.dart' as http;
+import 'package:http/http.dart' as https;
 import '../../config.dart';
 
 class APIProductom {
-  static var client = http.Client();
+  static var client = https.Client();
 
   static Future<List<ProductomModel>?> getProductosm() async {
     Map<String, String> requestHeaders = {
@@ -45,7 +45,7 @@ class APIProductom {
 
     var requestMethod = isEditMode ? "PUT" : "POST";
 
-    var request = http.MultipartRequest(requestMethod, url);
+    var request = https.MultipartRequest(requestMethod, url);
     request.fields["nombre"] = modelm.nombre!;
     request.fields["precio"] = double.parse(modelm.precio!).toStringAsFixed(2);
     request.fields["marca"] = modelm.marca!;
@@ -54,7 +54,7 @@ class APIProductom {
 
 
     if (modelm.imagen != null && isFileSelected) {
-      http.MultipartFile multipartFile = await http.MultipartFile.fromPath(
+      https.MultipartFile multipartFile = await https.MultipartFile.fromPath(
         'imagen',
         modelm.imagen!,
       );

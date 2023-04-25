@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:apptiendafrom/models/producto_model.dart';
-import 'package:http/http.dart' as http;
+import 'package:http/http.dart' as https; //solo cambiaarla https
 import '../../config.dart';
 
 class APIProducto {
-  static var client = http.Client();
+  static var client = https.Client();
 
   static Future<List<ProductoModel>?> getProductos() async {
     Map<String, String> requestHeaders = {
@@ -45,7 +45,7 @@ class APIProducto {
 
     var requestMethod = isEditMode ? "PUT" : "POST";
 
-    var request = http.MultipartRequest(requestMethod, url);
+    var request = https.MultipartRequest(requestMethod, url);
     request.fields["nombre"] = model.nombre!;
     request.fields["precio"] = double.parse(model.precio!).toStringAsFixed(2);
     request.fields["marca"] = model.marca!;
@@ -57,7 +57,7 @@ class APIProducto {
     //request.headers["Authorization"] = "token 6c7e9f684c68adf057008ce8a0f4dc11fae3c0d4";
 
     if (model.imagen != null && isFileSelected) {
-      http.MultipartFile multipartFile = await http.MultipartFile.fromPath(
+      https.MultipartFile multipartFile = await https.MultipartFile.fromPath(
         'imagen',
         model.imagen!,
       );
