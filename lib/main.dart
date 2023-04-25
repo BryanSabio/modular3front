@@ -63,10 +63,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   TextEditingController passwordController = TextEditingController();
 
   //final urllogin = Uri.parse("http://192.168.1.108/api/login/");  PARA REGRESAR TOKENS DE ERROR DE USER
-  final urllogin = Uri.http(Config.apiURL, Config.loginAPI);
+  final urllogin = Uri.https(Config.apiURL, Config.loginAPI);
 
   //final urlobtenertoken = Uri.parse("http://192.168.1.108/api/api-token-auth/");
-  final urlobtenertoken = Uri.http(Config.apiURL, Config.obtenertokenAPI);
+  final urlobtenertoken = Uri.https(Config.apiURL, Config.obtenertokenAPI);
   final headers = {"Content-Type": "application/json;charset=UTF-8"};
 
   @override
