@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 import '../../config.dart';
 import '../../models/producto_mediano.dart';
+import 'package:share/share.dart';
 
 class ProductomItem extends StatelessWidget {
   final ProductomModel model;
   final Function? onDelete;
+  final Function? onPressed;
 
   // ignore: prefer_const_constructors_in_immutables
   ProductomItem({
     Key? key,
     required this.model,
     this.onDelete,
+    this.onPressed,
   }) : super(key: key);
 
   @override
@@ -102,34 +105,41 @@ class ProductomItem extends StatelessWidget {
                 height: 10,
               ),
               if (!Config.isAnonymun)
-              SizedBox(
-                width: MediaQuery.of(context).size.width - 180,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    GestureDetector(
-                      child: const Icon(Icons.edit),
-                      onTap: () {
-                        Navigator.of(context).pushNamed(
-                          '/edit-productom',
-                          arguments: {
-                            'model': model,
-                          },
-                        );
-                      },
-                    ),
-                    GestureDetector(
-                      child: const Icon(
-                        Icons.delete,
-                        color: Colors.red,
+                SizedBox(
+                  width: MediaQuery.of(context).size.width - 180,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      GestureDetector(
+                        child: const Icon(Icons.edit),
+                        onTap: () {
+                          Navigator.of(context).pushNamed(
+                            '/edit-productom',
+                            arguments: {
+                              'model': model,
+                            },
+                          );
+                        },
                       ),
-                      onTap: () {
-                        onDelete!(model);
-                      },
-                    ),
-                  ],
-                ),
-              )
+                      GestureDetector(
+                        child: const Icon(
+                          Icons.delete,
+                          color: Colors.red,
+                        ),
+                        onTap: () {
+                          onDelete!(model);
+                        },
+                      ),
+                      GestureDetector(
+                        child: const Icon(Icons.share),
+                        onTap: () {
+                          onPressed!(Share.share(
+                              "https://lucent-begonia-4953ae.netlify.app/"));
+                        },
+                      ),
+                    ],
+                  ),
+                )
             ],
           ),
         ),
