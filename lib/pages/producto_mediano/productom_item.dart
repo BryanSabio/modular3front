@@ -45,7 +45,7 @@ class ProductomItem extends StatelessWidget {
           width: 120,
           alignment: Alignment.center,
           margin: const EdgeInsets.all(10),
-          child: Image.asset(//era network
+          child: Image.network(
             model.imagen!,
             height: 170,
             fit: BoxFit.scaleDown,

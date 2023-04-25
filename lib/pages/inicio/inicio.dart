@@ -35,8 +35,8 @@ class inicio extends StatelessWidget {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  'Razas de perros pequeños: peso entre 3 y 10 kilos.',
-                  style: TextStyle(fontSize: 20),
+                  'Razas pequeñas: peso entre 3 y 10 kilos.',
+                  style: TextStyle(fontSize: 30),
                 )),
             Container(
                 height: 50,
@@ -45,10 +45,7 @@ class inicio extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                       primary: Colors.deepPurpleAccent, // Background color
                       shape: CircleBorder()),
-                  child: Icon(
-                    Icons.card_giftcard_sharp,
-                    color: Colors.black,
-                  ),
+                  child: Icon(Icons.food_bank_rounded),
                   onPressed: () {
                     Navigator.pushNamedAndRemoveUntil(
                         context, '/list-producto', (route) => false);
@@ -63,8 +60,8 @@ class inicio extends StatelessWidget {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  'Razas de perros medianos: peso desde 10 a 25 kilos.',
-                  style: TextStyle(fontSize: 20),
+                  'Razas medianas: peso desde 10 a 25 kilos.',
+                  style: TextStyle(fontSize: 30),
                 )),
             Container(
                 height: 50,
@@ -73,7 +70,7 @@ class inicio extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                       primary: Colors.deepPurpleAccent, // Background color
                       shape: CircleBorder()),
-                  child: Icon(Icons.card_giftcard_sharp),
+                  child: Icon(Icons.food_bank_rounded),
                   onPressed: () {
                     Navigator.pushNamedAndRemoveUntil(
                         context, '/list-productom', (route) => false);
@@ -88,8 +85,8 @@ class inicio extends StatelessWidget {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  'Razas de perros grandes: 25 a 50 kilos.',
-                  style: TextStyle(fontSize: 20),
+                  'Razas grandes: 25 a 50 kilos.',
+                  style: TextStyle(fontSize: 30),
                 )),
             Container(
                 height: 50,
@@ -98,7 +95,7 @@ class inicio extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                       primary: Colors.deepPurpleAccent, // Background color
                       shape: CircleBorder()),
-                  child: Icon(Icons.card_giftcard_sharp),
+                  child: Icon(Icons.food_bank_rounded),
                   onPressed: () {
                     Navigator.pushNamedAndRemoveUntil(
                         context, '/list-productog', (route) => false);
@@ -113,8 +110,8 @@ class inicio extends StatelessWidget {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  'Perros gigantes: más de 50 kilos.',
-                  style: TextStyle(fontSize: 20),
+                  'Razas gigantes: más de 50 kilos.',
+                  style: TextStyle(fontSize: 30),
                 )),
             Container(
                 height: 50,
@@ -123,7 +120,7 @@ class inicio extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                       primary: Colors.deepPurpleAccent, // Background color
                       shape: CircleBorder()),
-                  child: Icon(Icons.card_giftcard_sharp),
+                  child: Icon(Icons.food_bank_rounded),
                   onPressed: () {
                     Navigator.pushNamedAndRemoveUntil(
                         context, '/list-productogi', (route) => false);
