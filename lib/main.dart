@@ -20,7 +20,7 @@ import 'package:apptiendafrom/pages/producto_grande/productog_add.dart';
 import 'package:apptiendafrom/pages/producto_gigante/productogi_list.dart';
 import 'package:apptiendafrom/pages/producto_gigante/productogi_add.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(const MyApp()); //ok
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -131,7 +131,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     child: const Text('Acceder',
                         style: TextStyle(
                           fontSize: 20,
-                          color: Colors.black, 
+                          color: Colors.black,
                         )),
                     onPressed: () {
                       login();
