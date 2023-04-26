@@ -15,6 +15,7 @@ class ProductoItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(model.imagen);
     return Card(
       elevation: 0,
       margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
@@ -102,34 +103,34 @@ class ProductoItem extends StatelessWidget {
                 height: 10,
               ),
               if (!Config.isAnonymun)
-              SizedBox(
-                width: MediaQuery.of(context).size.width - 180,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    GestureDetector(
-                      child: const Icon(Icons.edit),
-                      onTap: () {
-                        Navigator.of(context).pushNamed(
-                          '/edit-producto',
-                          arguments: {
-                            'model': model,
-                          },
-                        );
-                      },
-                    ),
-                    GestureDetector(
-                      child: const Icon(
-                        Icons.delete,
-                        color: Colors.red,
+                SizedBox(
+                  width: MediaQuery.of(context).size.width - 180,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      GestureDetector(
+                        child: const Icon(Icons.edit),
+                        onTap: () {
+                          Navigator.of(context).pushNamed(
+                            '/edit-producto',
+                            arguments: {
+                              'model': model,
+                            },
+                          );
+                        },
                       ),
-                      onTap: () {
-                        onDelete!(model);
-                      },
-                    ),
-                  ],
-                ),
-              )
+                      GestureDetector(
+                        child: const Icon(
+                          Icons.delete,
+                          color: Colors.red,
+                        ),
+                        onTap: () {
+                          onDelete!(model);
+                        },
+                      ),
+                    ],
+                  ),
+                )
             ],
           ),
         ),
