@@ -25,7 +25,7 @@ class ProductoModel {
     this.descripcion,
     this.imagen,
   });
-  
+
   factory ProductoModel.fromJson(Map<String, dynamic> json) {
     return ProductoModel(
       id: json['id'] as int,
