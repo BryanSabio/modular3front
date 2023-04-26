@@ -18,6 +18,7 @@ class ProductomItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    model.imagen = model.imagen?.replaceAll('http://', 'https://');
     return Card(
       elevation: 0,
       margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
