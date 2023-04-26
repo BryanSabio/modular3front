@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:apptiendafrom/models/producto_model.dart';
 import 'package:apptiendafrom/services/api_producto.dart';
@@ -317,8 +318,8 @@ class _ProductoAddEditState extends State<ProductoAddEdit> {
 
     return Column(
       children: [
-        fileName.isNotEmpty
-            ? isImageSelected
+        fileName.isNotEmpty && isImageSelected
+            ? (!kIsWeb
                 ? Image.file(
                     File(fileName),
                     width: 300,
@@ -331,7 +332,7 @@ class _ProductoAddEditState extends State<ProductoAddEdit> {
                       height: 200,
                       fit: BoxFit.scaleDown,
                     ),
-                  )
+                  ))
             : SizedBox(
                 child: Image.network(
                   "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png",

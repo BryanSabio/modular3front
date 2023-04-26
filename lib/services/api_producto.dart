@@ -57,7 +57,7 @@ class APIProducto {
     //request.headers["Authorization"] = "token 6c7e9f684c68adf057008ce8a0f4dc11fae3c0d4";
 
     if (model.imagen != null && isFileSelected) {
-      https.MultipartFile multipartFile = await https.MultipartFile.fromPath(
+      var multipartFile = await https.MultipartFile.fromPath(
         'imagen',
         model.imagen!,
       );
