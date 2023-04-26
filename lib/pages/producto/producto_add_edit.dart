@@ -232,9 +232,9 @@ class _ProductoAddEditState extends State<ProductoAddEdit> {
             productoModel!.imagen ?? "",
             (file) => {
               setState(
-                () {
+                () async {
                   //Image.network(image.path)
-                  productoModel!.imagen = file.path;
+                  productoModel!.imagen = await file.readAsString();
                   isImageSelected = true;
                 },
               )

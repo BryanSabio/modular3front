@@ -130,7 +130,7 @@ class inicio extends StatelessWidget {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  '* Aplican restricciones. Precios y Adquirir sujetos a cambios sin previo aviso.',
+                  '* Aplican restricciones. Precios y Adquirir están sujetos a cambios sin previo aviso.',
                   style: TextStyle(fontSize: 20),
                 )),
           ],
