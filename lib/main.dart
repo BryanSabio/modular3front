@@ -3,7 +3,7 @@
 import 'dart:convert';
 import 'package:animated_background/animated_background.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as https;
+import 'package:http/http.dart' as http;
 import 'package:apptiendafrom/usuario.dart';
 import 'package:apptiendafrom/menu.dart';
 import 'package:apptiendafrom/config.dart';
@@ -181,7 +181,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       "username": nameController.text,
       "password": passwordController.text
     };
-    final res = await https.post(urllogin,
+    final res = await http.post(urllogin,
         headers: headers, body: jsonEncode(datosdelposibleusuario));
     //final data = Map.from(jsonDecode(res.body));
     if (res.statusCode == 400) {
@@ -191,7 +191,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     if (res.statusCode != 200) {
       showSnackbar("Hey!! usuario o contraseña incorrectos");
     }
-    final res2 = await https.post(urlobtenertoken,
+    final res2 = await http.post(urlobtenertoken,
         headers: headers, body: jsonEncode(datosdelposibleusuario));
     final data2 = Map.from(jsonDecode(res2.body));
     if (res2.statusCode == 400) {
