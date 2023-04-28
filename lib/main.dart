@@ -22,6 +22,13 @@ import 'package:apptiendafrom/pages/producto_gigante/productogi_add.dart';
 
 void main() => runApp(const MyApp()); //ok
 
+Widget sessionMiddleware(Widget w) {
+  if (!Config.isAnonymun && Usuario.user == null) {
+    return const MyStatefulWidget();
+  }
+  return w;
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -33,24 +40,39 @@ class MyApp extends StatelessWidget {
         initialRoute: "/login",
         routes: {
           '/login': (context) => const MyStatefulWidget(),
-          '/list-producto': (context) => const ProductosList(), //pequeño
-          '/list-productom': (context) => const ProductosmList(), //mediano
-          '/list-productog': (context) => const ProductosgList(), //grande
-          '/list-productogi': (context) => const ProductosgiList(), //gigante
-          '/add-producto': (context) => const ProductoAddEdit(), //pequeño
-          '/edit-producto': (context) => const ProductoAddEdit(), //pequeño
-          '/add-productom': (context) => const ProductomAddEdit(), //mediano
-          '/edit-productom': (context) => const ProductomAddEdit(), //mediano
-          '/add-productog': (context) => const ProductogAddEdit(), //grande
-          '/edit-productog': (context) => const ProductogAddEdit(), //grande
-          '/add-productogi': (context) => const ProductogiAddEdit(), //gigante
-          '/edit-productogi': (context) => const ProductogiAddEdit(), //gigante
+          '/list-producto': (context) =>
+              sessionMiddleware(const ProductosList()), //pequeño
+          '/list-productom': (context) =>
+              sessionMiddleware(const ProductosmList()), //mediano
+          '/list-productog': (context) =>
+              sessionMiddleware(const ProductosgList()), //grande
+          '/list-productogi': (context) =>
+              sessionMiddleware(const ProductosgiList()), //gigante
+          '/add-producto': (context) =>
+              sessionMiddleware(const ProductoAddEdit()), //pequeño
+          '/edit-producto': (context) =>
+              sessionMiddleware(const ProductoAddEdit()), //pequeño
+          '/add-productom': (context) =>
+              sessionMiddleware(const ProductomAddEdit()), //mediano
+          '/edit-productom': (context) =>
+              sessionMiddleware(const ProductomAddEdit()), //mediano
+          '/add-productog': (context) =>
+              sessionMiddleware(const ProductogAddEdit()), //grande
+          '/edit-productog': (context) =>
+              sessionMiddleware(const ProductogAddEdit()), //grande
+          '/add-productogi': (context) =>
+              sessionMiddleware(const ProductogiAddEdit()), //gigante
+          '/edit-productogi': (context) =>
+              sessionMiddleware(const ProductogiAddEdit()), //gigante
 
-          '/home': (context) => Menu(),
+          '/home': (context) => sessionMiddleware(Menu()),
         });
   }
 }
+//model.imagen = model.imagen?.replaceAll('http://', 'https://');
 
+//https://alimento-mi-mascota.netlify.app/#/add-productom
+//https://alimento-mi-mascota.netlify.app/#/home
 class MyStatefulWidget extends StatefulWidget {
   const MyStatefulWidget({Key? key}) : super(key: key);
 
@@ -64,6 +86,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   //final urllogin = Uri.parse("http://192.168.1.108/api/login/");  PARA REGRESAR TOKENS DE ERROR DE USER
   final urllogin = Uri.https(Config.apiURL, Config.loginAPI);
+  //Uri = 'https://alimento-mi-mascota.netlify.app/#/login'
 
   //final urlobtenertoken = Uri.parse("http://192.168.1.108/api/api-token-auth/");
   final urlobtenertoken = Uri.https(Config.apiURL, Config.obtenertokenAPI);
@@ -202,7 +225,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       showSnackbar("Ups ha habido un error al obtener el token ");
     }
     final token = data2["token"];
-    final user = Usuario(
+    Usuario.user = Usuario(
         username: nameController.text,
         password: passwordController.text,
         token: token);

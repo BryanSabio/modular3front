@@ -2,6 +2,7 @@ class Usuario {
   String username;
   String password;
   String token;
+  static Usuario? user;
 
   Usuario({
     required this.username,
