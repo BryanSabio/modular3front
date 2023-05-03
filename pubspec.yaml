@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   share: ^2.0.4
   image_picker_for_web: ^2.1.12
+  native_notify: ^0.0.17
   #animated_background: ^2.0.0
 
 dev_dependencies:
