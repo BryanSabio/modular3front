@@ -1,7 +1,4 @@
 // ignore_for_file: depend_on_referenced_packages
-import 'package:flutter/material.dart';
-import 'package:native_notify/native_notify.dart';
-
 import 'dart:convert';
 import 'package:animated_background/animated_background.dart';
 import 'package:flutter/material.dart';
