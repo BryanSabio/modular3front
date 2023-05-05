@@ -19,6 +19,8 @@ import 'package:apptiendafrom/pages/producto_grande/productog_add.dart';
 import 'package:apptiendafrom/pages/producto_gigante/productogi_list.dart';
 import 'package:apptiendafrom/pages/producto_gigante/productogi_add.dart';
 
+import 'package:fluttertoast/fluttertoast.dart';
+
 void main() => runApp(const MyApp()); //ok
 
 Widget sessionMiddleware(Widget w) {
@@ -229,6 +231,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         password: passwordController.text,
         token: token);
     Config.isAnonymun = false;
+    Fluttertoast.showToast(
+        msg: "Accediste como Administrador",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0);
     Navigator.pushNamed(
       context,
       '/home',
@@ -237,6 +247,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   Future<void> login2() async {
     Config.isAnonymun = true;
+    Fluttertoast.showToast(
+        msg: "Accediste como Invitado",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0);
     Navigator.pushNamed(
       context,
       '/home',

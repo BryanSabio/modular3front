@@ -8,6 +8,8 @@ import 'package:apptiendafrom/pages/producto/producto_list.dart';
 import 'package:apptiendafrom/pages/inicio/inicio.dart';
 import 'package:flutter/services.dart';
 
+import 'package:fluttertoast/fluttertoast.dart';
+
 class Menu extends StatefulWidget {
   @override
   MenuState createState() => MenuState();
@@ -101,6 +103,14 @@ class MenuState extends State<Menu> {
               leading: const Icon(Icons.arrow_back),
               selected: (5 == _selectDrawerItem),
               onTap: () {
+                Fluttertoast.showToast(
+                    msg: "Vuelve pronto  (-_-)",
+                    toastLength: Toast.LENGTH_SHORT,
+                    gravity: ToastGravity.CENTER,
+                    timeInSecForIosWeb: 1,
+                    backgroundColor: Colors.red,
+                    textColor: Colors.white,
+                    fontSize: 16.0);
                 Navigator.pushNamedAndRemoveUntil(
                     context, '/login', (route) => false);
               },
